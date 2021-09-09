@@ -1,0 +1,45 @@
+{
+  "tabs": [
+    {
+      "id": 1,
+      "label": "Cash Withdrawal",
+      "content": "Cash Withdrawal"
+    },
+    {
+      "id": 2,
+      "label": "Cash Deposit",
+      "content": "Cash Deposit"
+    },
+    {
+      "id": 3,
+      "label": "Loan  repayment",
+      "content": "Loan  repayment"
+    },
+    {
+      "id": 4,
+      "label": "Loan Statement",
+      "content": "Loan Statement"
+    },
+    {
+      "id": 5,
+      "label": "Balance Inquiry",
+      "content": "Balance Inquiry"
+    },
+    {
+      "id": 6,
+      "label": "Member Reg",
+      "content": "Member Reg"
+    },
+    {
+      "id": 7,
+      "label": "Float Deposit",
+      "content": "Float Deposit"
+
+    },
+    {
+      "id": 8,
+      "label": "Account Query",
+      "content": "tyrutrf"
+    }
+  ]
+}
