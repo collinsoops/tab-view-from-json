@@ -19,33 +19,29 @@ class _ListCategoriesState extends State<ListCategories> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<Category>>(
       future: Category.getCategories(),
-      builder: (c, s) {
-        if (s.hasData) {
+      builder: (contex, lsbuilder) {
+        if (lsbuilder.hasData) {
           List<Tab> tabs = [];
           List<Widget> content = [];
-          for (int i = 0; i < s.data.length; i++) {
+          for (int counter = 0; counter < lsbuilder.data.length; counter++) {
             tabs.add(Tab(
               child: Text(
-                s.data[i].label,
+                lsbuilder.data[counter].label,
                 style: TextStyle(color: Colors.white),
               ),
             ));
 
             content.add(
-
                Text(
-                s.data[i].content,
+                lsbuilder.data[counter].content,
                 style: TextStyle(color: Colors.black),
               ),
             );
             print(content);
-
           }
 
-
-
           return DefaultTabController(
-            length: s.data.length,
+            length: lsbuilder.data.length,
             child: Scaffold(
               appBar: AppBar(
                 title: Text("Tab Demo"),
@@ -70,10 +66,10 @@ class _ListCategoriesState extends State<ListCategories> {
             ),
           );
         }
-        if (s.hasError) print(s.error.toString());
+        if (lsbuilder.hasError) print(lsbuilder.error.toString());
         return Scaffold(
           body: Center(
-              child: Text(s.hasError ? s.error.toString() : "Loading...")),
+              child: Text(lsbuilder.hasError ? lsbuilder.error.toString() : "Loading...")),
         );
       },
     );

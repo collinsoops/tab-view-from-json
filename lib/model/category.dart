@@ -9,11 +9,7 @@ class Category {
   String label;
   String content;
 
-  Category({
-    this.id,
-    this.label,
-    this.content,
-  });
+  Category({this.id, this.label, this.content,});
 
   static Future<List<Category>> getCategories() async {
     final String response = await rootBundle.loadString('assets/tabs.json');
@@ -21,14 +17,9 @@ class Category {
     //final data = jsonDecode(response);
     //print(data);
 
-
-
     List<Category> list = [];
-
     try {
-
         Map<String, dynamic> map = json.decode(response);
-
         for (var map in map['tabs']) {
           list.add(Category(id: map['id'], label: map['label'],content: map['content']));
         }
